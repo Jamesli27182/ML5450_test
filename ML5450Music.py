@@ -40,12 +40,10 @@ def to_find_cloest(A,B) -> int: #A: 2 x 1,B; n x m
     index_num = 0
     for i in range(b_r):
         dis_vec[i] = cal_dis(A,B[i])
-    
     min_dis = min(dis_vec)
     for i in range(b_r):
         if dis_vec[i] == min_dis:
             index_num = i
             break
-
-    return index_num
+    return index_num,min_dis
 
